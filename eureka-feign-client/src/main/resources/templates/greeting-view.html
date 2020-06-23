@@ -4,8 +4,22 @@
     <title>Greeting Page</title>
 </head>
 <body>
-<h2 th:text="${greeting}"/>
-<h2 th:text="${greeting1}"/>
-<h2 th:text="${greeting2}"/>
+<!--<h2 th:text="${greeting}"/>-->
+<!--<h2 th:text="${greeting1}"/>-->
+<!--<h2 th:text="${greeting2}"/>-->
+<table>
+    <thead >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="role : ${roles}">
+        <td th:text="${role.id}"/>
+        <td th:text="${role.name}"/>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
